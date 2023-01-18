@@ -75,6 +75,7 @@ body {
     width: 85%;
     font-size: 18px;
     padding: 0 1.111em;
+    overflow: visible;
 }
 .btn--slider .btn__text {
     transform: translateY(50%);
