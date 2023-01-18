@@ -1,0 +1,158 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body {
+    padding-top: 200px;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color: #101010;
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background: #DB3138;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+.btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    transition: transform 0.5s ease;
+}
+.btn__text {
+    display: block;
+    text-align: center;
+}
+
+/*-- btn-common --*/
+.btn--common {
+    background: linear-gradient(90deg, #DB3138 70%, transparent 30%);
+}
+.btn--common::before {
+    width: 70%;
+}
+.btn--common:hover::before {
+    transform: translateX(70%);
+    transition: transform 0.5s ease;
+}
+
+/*-- btn-slider --*/
+.btn--slider {
+    position: relative;
+    transform: translateY(-50%);
+    width: 85%;
+    padding: 0 20px;
+}
+.btn--slider .btn__text {
+    transform: translateY(50%);
+    font-size: 24px;
+}
+.btn--slider:hover::before {
+    transform: translateY(50%);
+    transition: transform 0.5s ease;
+}
+/*----------------------------------------------------------*/
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+
+}
+.slider__wrapper {
+    max-width: 1296px;
+    overflow: hidden;
+}
+.slider__inner {
+    display: flex;
+    margin: 0 -12px;
+    /*transition: transform 0.8s ease;*/
+}
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33333%;
+    padding: 0 12px;
+}
+.img__wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+.img__wrapper img {
+    object-fit: cover;
+    height: auto;
+    min-width: 416px;
+
+}
+.slider__arrow {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 71px;
+    height: 71px;
+    margin-right: 60px;
+}
+.slider__arrow.disable {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.slider__arrow::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: -1;
+    transition: background-color 0.2s ease;
+}
+.slider__arrow--right {
+    transform: rotate(180deg);
+    margin: 0 0 0 60px;
+
+}
+
+.slider__arrow:not(.disable):hover::after {
+    background: #DB3138;
+    transition: background-color 0.2s ease;
+}
+
+
+
+/*!*----------------------------------------------------------*!*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

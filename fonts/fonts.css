@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'ReformaGroteskMediumC';
+    src: local('ReformaGroteskMediumC'),
+    url('ReformaGroteskMediumC.woff') format('woff'),
+    url('ReformaGroteskMediumC.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ReformaGroteskDemiC';
+    src: local('ReformaGroteskDemiC'),
+    url('ReformaGroteskDemiC.woff') format('woff'),
+    url('ReformaGroteskDemiC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ReformaGroteskBoldC';
+    src: local('ReformaGroteskBoldC'),
+    url('ReformaGroteskBoldC.woff') format('woff'),
+    url('ReformaGroteskBoldC.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
